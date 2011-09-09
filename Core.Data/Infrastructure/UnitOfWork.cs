@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 #endregion Using Directives
 
-namespace EventsManagement.Data.Infrastructure
+namespace Core.Data.Infrastructure
 {
     public class UnitOfWork : IUnitOfWork
     {

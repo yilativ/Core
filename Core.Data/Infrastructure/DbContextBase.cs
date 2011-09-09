@@ -6,7 +6,7 @@ using System.Text;
 using System.Data.Entity;
 #endregion Using Directives
 
-namespace EventsManagement.Data.Infrastructure
+namespace Core.Data.Infrastructure
 {
     public class DbContextBase : DbContext, IDbContext
     {
