@@ -4,18 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.Entity;
+using System.Data.Objects;
 #endregion Using Directives
 
 namespace Core.Data.Infrastructure
 {
     public class DbContextBase : DbContext, IDbContext
     {
-        public const string ConstructorParameterName = "nameOrConnectionString";
+        protected readonly IConnectionFactory connectionFactory;
 
-        public DbContextBase(string nameOrConnectionString)
-            : base(nameOrConnectionString)
+        public DbContextBase(IConnectionFactory connectionFactory)
+            : base(connectionFactory.GetNameOrConnectionString())
         {
-
+            this.connectionFactory = connectionFactory;
         }
 
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
