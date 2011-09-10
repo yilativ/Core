@@ -53,6 +53,7 @@
     <Compile Include="Data\IUnitOfWork.cs" />
     <Compile Include="Data\RepositoryBase.cs" />
     <Compile Include="Data\UnitOfWork.cs" />
+    <Compile Include="Attributes\InjectDependencyAttribute.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\ILoggerFactory.cs" />
     <Compile Include="Logging\LoggerBase.cs" />

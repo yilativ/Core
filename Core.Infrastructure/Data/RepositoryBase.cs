@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Data.Entity;
 using Core.Infrastructure.Logging;
+using Core.Infrastructure.Attributes;
 #endregion Using Directives
 
 namespace Core.Infrastructure.Data
@@ -13,11 +14,12 @@ namespace Core.Infrastructure.Data
     {
         protected readonly IDbContext context;
         protected readonly IDbSet<T> entities;
-        protected readonly ILogger log;
 
-        public RepositoryBase(IDatabaseFactory databaseFactory, ILogger log)
+        [InjectDependency]
+        public virtual ILogger Log { get; set; }
+
+        public RepositoryBase(IDatabaseFactory databaseFactory)
         {
-            this.log = log;
             this.context = databaseFactory.Get();
             this.entities = context.Set<T>();
         }

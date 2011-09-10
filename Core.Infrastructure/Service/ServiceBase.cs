@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Core.Infrastructure.Data;
+using Core.Infrastructure.Logging;
+using Core.Infrastructure.Attributes;
 #endregion Using Directives
 
 namespace Core.Service.Infrastructure
@@ -14,6 +16,9 @@ namespace Core.Service.Infrastructure
     {
         protected readonly TRepository repository;
         protected readonly IUnitOfWork unitOfWork;
+
+        [InjectDependency]
+        public virtual ILogger Log { get; set; }
 
         public ServiceBase(TRepository repository, IUnitOfWork unitOfWork)
         {

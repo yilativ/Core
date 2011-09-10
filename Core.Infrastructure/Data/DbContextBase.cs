@@ -6,6 +6,7 @@ using System.Text;
 using System.Data.Entity;
 using System.Data.Objects;
 using Core.Infrastructure.Logging;
+using Core.Infrastructure.Attributes;
 #endregion Using Directives
 
 namespace Core.Infrastructure.Data
@@ -13,13 +14,14 @@ namespace Core.Infrastructure.Data
     public class DbContextBase : DbContext, IDbContext
     {
         protected readonly IConnectionFactory connectionFactory;
-        protected readonly ILogger log;
 
-        public DbContextBase(IConnectionFactory connectionFactory, ILogger log)
+        [InjectDependency]
+        public ILogger Log { get; set; }
+
+        public DbContextBase(IConnectionFactory connectionFactory)
             : base(connectionFactory.GetNameOrConnectionString())
         {
             this.connectionFactory = connectionFactory;
-            this.log = log;
         }
 
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
