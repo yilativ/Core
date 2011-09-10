@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Data", "Core.Data\Core.Data.csproj", "{5F1F177A-7A46-420C-89B1-560872567CB6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Service", "Core.Service\Core.Service.csproj", "{9E1C7A0D-AD64-4926-B7FF-B5C33BE674D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Infrastructure", "Core.Infrastructure\Core.Infrastructure.csproj", "{58E56B25-807A-4CDA-8157-04ED4FF9FA81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5F1F177A-7A46-420C-89B1-560872567CB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F1F177A-7A46-420C-89B1-560872567CB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F1F177A-7A46-420C-89B1-560872567CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F1F177A-7A46-420C-89B1-560872567CB6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E1C7A0D-AD64-4926-B7FF-B5C33BE674D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E1C7A0D-AD64-4926-B7FF-B5C33BE674D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E1C7A0D-AD64-4926-B7FF-B5C33BE674D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E1C7A0D-AD64-4926-B7FF-B5C33BE674D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E56B25-807A-4CDA-8157-04ED4FF9FA81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E56B25-807A-4CDA-8157-04ED4FF9FA81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E56B25-807A-4CDA-8157-04ED4FF9FA81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E56B25-807A-4CDA-8157-04ED4FF9FA81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

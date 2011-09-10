@@ -7,7 +7,7 @@ using System.Data.Entity;
 using System.Data.Objects;
 #endregion Using Directives
 
-namespace Core.Data.Infrastructure
+namespace Core.Infrastructure.Data
 {
     public class DbContextBase : DbContext, IDbContext
     {

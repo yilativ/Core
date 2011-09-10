@@ -6,7 +6,7 @@ using System.Text;
 using System.Data.Entity;
 #endregion Using Directives
 
-namespace Core.Data.Infrastructure
+namespace Core.Infrastructure.Data
 {
     public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {

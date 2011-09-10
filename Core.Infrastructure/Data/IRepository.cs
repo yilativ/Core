@@ -6,7 +6,7 @@ using System.Text;
 using System.Linq.Expressions;
 #endregion Using Directives
 
-namespace Core.Data.Infrastructure
+namespace Core.Infrastructure.Data
 {
     public interface IRepository<T> where T : class
     {

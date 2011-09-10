@@ -3,10 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Core.Security.Infrastructure;
 #endregion Using Directives
 
-namespace Core.Service.Security
+namespace Core.Infrastructure.Security
 {
     public interface IAuthenticationService
     {

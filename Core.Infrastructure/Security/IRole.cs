@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 #endregion Using Directives
 
-namespace Core.Security.Infrastructure
+namespace Core.Infrastructure.Security
 {
     public interface IRole
     {

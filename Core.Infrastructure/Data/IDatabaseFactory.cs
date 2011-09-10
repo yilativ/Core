@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text; 
+using System.Text;
 #endregion Using Directives
 
-namespace Core.Data.Infrastructure
+namespace Core.Infrastructure.Data
 {
-    public interface IUnitOfWork
+    public interface IDatabaseFactory
     {
-        void Commit();
+        IDbContext Get();
     }
 }

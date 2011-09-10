@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Core.Data.Infrastructure;
+using Core.Infrastructure.Data;
 #endregion Using Directives
 
 namespace Core.Service.Infrastructure

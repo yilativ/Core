@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 #endregion Using Directives
 
-namespace Core.Data.Infrastructure
+namespace Core.Infrastructure
 {
-    public interface IConnectionFactory
+    public interface ILogger
     {
-        string GetNameOrConnectionString();
+
     }
 }
