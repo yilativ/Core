@@ -16,7 +16,7 @@ namespace Core.Infrastructure.Data
         protected readonly IDbSet<T> entities;
 
         [InjectDependency]
-        public virtual ILogger Log { get; set; }
+        public abstract ILogger Log { get; set; }
 
         public RepositoryBase(IDatabaseFactory databaseFactory)
         {
@@ -26,11 +26,19 @@ namespace Core.Infrastructure.Data
 
         public void Add(T entity)
         {
+            if (entity == null)
+                throw new ArgumentNullException("entity");
+
+            Log.Info("Adding entity: " + entity.ToString());
             entities.Add(entity);
         }
 
         public void Delete(T entity)
         {
+            if (entity == null)
+                throw new ArgumentNullException("entity");
+
+            Log.Info("Deleting entity: " + entity.ToString());
             entities.Remove(entity);
         }
 
@@ -38,12 +46,13 @@ namespace Core.Infrastructure.Data
         {
             foreach (T entity in entities.Where(where))
             {
-                entities.Remove(entity);
+                Delete(entity);
             }
         }
 
         public T GetById(int id)
         {
+            Log.Info("Getting entity from {0} with id: {1}", this, id);
             return entities.Find(id);
         }
 
@@ -54,12 +63,16 @@ namespace Core.Infrastructure.Data
 
         public IQueryable<T> GetAll()
         {
+            Log.Info("Getting all entities from {0}", this);
             return entities;
         }
 
         public IQueryable<T> GetWhere(System.Linq.Expressions.Expression<Func<T, bool>> where)
         {
+            Log.Info("Getting entities with a 'where' expression from: {0}", this);
             return entities.Where(where);
         }
+
+        public abstract override string ToString();
     }
 }
