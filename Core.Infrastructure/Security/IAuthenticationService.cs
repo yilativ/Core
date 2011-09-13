@@ -9,7 +9,7 @@ namespace Core.Infrastructure.Security
 {
     public interface IAuthenticationService
     {
-        bool Login(string username, string password);
+        bool Login(IUser user, bool rememberMe);
         bool Logout(IUser user);
     }
 }
