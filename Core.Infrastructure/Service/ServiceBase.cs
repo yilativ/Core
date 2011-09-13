@@ -10,7 +10,7 @@ using Core.Infrastructure.Attributes;
 
 namespace Core.Service.Infrastructure
 {
-    public class ServiceBase<T, TRepository> : IServiceBase<T>
+    public abstract class ServiceBase<T, TRepository> : IServiceBase<T>
         where T : class
         where TRepository : IRepository<T>
     {
@@ -18,7 +18,7 @@ namespace Core.Service.Infrastructure
         protected readonly IUnitOfWork unitOfWork;
 
         [InjectDependency]
-        public virtual ILogger Log { get; set; }
+        public abstract ILogger Log { get; set; }
 
         public ServiceBase(TRepository repository, IUnitOfWork unitOfWork)
         {
@@ -54,5 +54,7 @@ namespace Core.Service.Infrastructure
         {
             unitOfWork.Commit();
         }
+
+        public abstract override string ToString();
     }
 }
