@@ -38,6 +38,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,8 +60,11 @@
     <Compile Include="Logging\LoggerBase.cs" />
     <Compile Include="Logging\LoggerFactoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\CryptographyService.cs" />
+    <Compile Include="Security\CryptoSettings.cs" />
     <Compile Include="Security\IAuthenticationService.cs" />
     <Compile Include="Security\IAuthorizationService.cs" />
+    <Compile Include="Security\ICryptographyService.cs" />
     <Compile Include="Security\IMembershipService.cs" />
     <Compile Include="Security\IRole.cs" />
     <Compile Include="Service\IServiceBase.cs" />

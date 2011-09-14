@@ -9,7 +9,7 @@ namespace Core.Infrastructure.Security
 {
     public interface IMembershipService
     {
-        bool ValidateUser(string username, string password, out IUser user);
+        bool ValidateUser(string username, string password);
         bool ChangePassword(string username, string oldPassword, string newpassword);
     }
 }
