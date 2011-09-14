@@ -15,15 +15,13 @@ namespace Core.Service.Infrastructure
         where TRepository : IRepository<T>
     {
         protected readonly TRepository repository;
-        protected readonly IUnitOfWork unitOfWork;
 
         [InjectDependency]
         public abstract ILogger Log { get; set; }
 
-        public ServiceBase(TRepository repository, IUnitOfWork unitOfWork)
+        public ServiceBase(TRepository repository)
         {
             this.repository = repository;
-            this.unitOfWork = unitOfWork;
         }
 
         public virtual T GetItem(int id)
@@ -50,11 +48,17 @@ namespace Core.Service.Infrastructure
             repository.Delete(item);
         }
 
-        public virtual void Save()
+        public virtual void Commit()
         {
-            unitOfWork.Commit();
+            repository.SaveChanges();
         }
 
         public abstract override string ToString();
+
+        public void Dispose()
+        {
+            if (repository != null)
+                repository.Dispose();
+        }
     }
 }

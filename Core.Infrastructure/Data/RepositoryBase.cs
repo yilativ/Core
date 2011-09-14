@@ -74,5 +74,16 @@ namespace Core.Infrastructure.Data
         }
 
         public abstract override string ToString();
+
+        public void SaveChanges()
+        {
+            context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            if (context != null)
+                context.Dispose();
+        }
     }
 }

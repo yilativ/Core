@@ -15,9 +15,6 @@ namespace Core.Infrastructure.Data
     {
         protected readonly IConnectionFactory connectionFactory;
 
-        [InjectDependency]
-        public abstract ILogger Log { get; set; }
-
         public DbContextBase(IConnectionFactory connectionFactory)
             : base(connectionFactory.GetNameOrConnectionString())
         {
@@ -27,6 +24,11 @@ namespace Core.Infrastructure.Data
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {
             return base.Set<TEntity>();
+        }
+
+        public void SaveChanges()
+        {
+            base.SaveChanges();
         }
     }
 }

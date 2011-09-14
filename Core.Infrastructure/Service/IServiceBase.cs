@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Core.Service.Infrastructure
 {
-    public interface IServiceBase<T>
+    public interface IServiceBase<T> : IDisposable
     {
         T GetItem(int id);
 
@@ -15,6 +15,6 @@ namespace Core.Service.Infrastructure
 
         void Create(T item);
         void Delete(int id);
-        void Save();
+        void Commit();
     }
 }
