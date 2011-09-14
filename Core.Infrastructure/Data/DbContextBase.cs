@@ -11,12 +11,12 @@ using Core.Infrastructure.Attributes;
 
 namespace Core.Infrastructure.Data
 {
-    public class DbContextBase : DbContext, IDbContext
+    public abstract class DbContextBase : DbContext, IDbContext
     {
         protected readonly IConnectionFactory connectionFactory;
 
         [InjectDependency]
-        public ILogger Log { get; set; }
+        public abstract ILogger Log { get; set; }
 
         public DbContextBase(IConnectionFactory connectionFactory)
             : base(connectionFactory.GetNameOrConnectionString())
