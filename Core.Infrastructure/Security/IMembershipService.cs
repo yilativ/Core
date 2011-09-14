@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Core.Infrastructure.Security
 {
-    public interface IMembershipService
+    public interface IMembershipService : IDisposable
     {
         bool ValidateUser(string username, string password);
         bool ChangePassword(string username, string oldPassword, string newpassword);

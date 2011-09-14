@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Core.Infrastructure.Security
 {
-    public interface IAuthenticationService
+    public interface IAuthenticationService : IDisposable
     {
         bool Login(string username, bool rememberMe);
         bool Logout(string username);
