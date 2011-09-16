@@ -24,6 +24,12 @@ namespace Core.Service.Infrastructure
             this.repository = repository;
         }
 
+        public virtual void Dispose()
+        {
+            if (repository != null)
+                repository.Dispose();
+        }
+
         public virtual T GetItem(int id)
         {
             return repository.GetById(id);
@@ -48,17 +54,11 @@ namespace Core.Service.Infrastructure
             repository.Delete(item);
         }
 
-        public virtual void Commit()
-        {
-            repository.SaveChanges();
-        }
-
         public abstract override string ToString();
 
-        public void Dispose()
+        public void SaveChanges()
         {
-            if (repository != null)
-                repository.Dispose();
+            repository.SaveChanges();
         }
     }
 }

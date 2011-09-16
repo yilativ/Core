@@ -69,6 +69,10 @@
     <Compile Include="Security\IRole.cs" />
     <Compile Include="Service\IServiceBase.cs" />
     <Compile Include="Security\IUser.cs" />
+    <Compile Include="Validation\IValidationResult.cs" />
+    <Compile Include="Validation\IValidationServiceFactory.cs" />
+    <Compile Include="Validation\IValidationFailure.cs" />
+    <Compile Include="Validation\IValidationService.cs" />
     <Compile Include="Service\ServiceBase.cs" />
   </ItemGroup>
   <ItemGroup>

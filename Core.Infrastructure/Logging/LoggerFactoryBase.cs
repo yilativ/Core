@@ -28,11 +28,6 @@ namespace Core.Infrastructure.Logging
         /// <returns>The newly-created logger.</returns>
         public ILogger GetLogger(Type type)
         {
-            if (this.loggers.ContainsKey(type))
-            {
-                return this.loggers[type];
-            }
-
             ILogger logger;
             if (this.loggers.TryGetValue(type, out logger))
                 return logger;

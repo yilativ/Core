@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Core.Infrastructure.Data;
 #endregion Using Directives
 
 namespace Core.Service.Infrastructure
 {
-    public interface IServiceBase<T> : IDisposable
+    public interface IServiceBase<T> : IUnitOfWork, IDisposable
     {
         T GetItem(int id);
 
@@ -15,6 +16,5 @@ namespace Core.Service.Infrastructure
 
         void Create(T item);
         void Delete(int id);
-        void Commit();
     }
 }
