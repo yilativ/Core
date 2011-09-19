@@ -85,16 +85,5 @@ namespace Core.Infrastructure.Data
             if (context != null)
                 context.Dispose();
         }
-
-
-        /// <summary>
-        /// Validates the specified entity.
-        /// </summary>
-        /// <param name="entity">The entity.</param>
-        /// <exception cref="System.ComponentModel.DataAnnotations.ValidationException">If any validation errors occur.</exception>
-        public void Validate(T entity)
-        {
-
-        }
     }
 }

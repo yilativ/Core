@@ -17,6 +17,5 @@ namespace Core.Infrastructure.Data
         T Get(Expression<Func<T, bool>> where);
         IQueryable<T> GetAll();
         IQueryable<T> GetWhere(Expression<Func<T, bool>> where);
-        void Validate(T entity);
     }
 }
