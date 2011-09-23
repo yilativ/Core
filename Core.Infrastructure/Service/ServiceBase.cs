@@ -24,12 +24,6 @@ namespace Core.Service.Infrastructure
             this.repository = repository;
         }
 
-        public virtual void Dispose()
-        {
-            if (repository != null)
-                repository.Dispose();
-        }
-
         public virtual T GetItem(int id)
         {
             return repository.GetById(id);

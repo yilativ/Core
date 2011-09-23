@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace Core.Infrastructure.Data
 {
-    public interface IRepository<T> : IUnitOfWork, IDisposable where T : class
+    public interface IRepository<T> : IUnitOfWork where T : class
     {
         void Add(T entity);
         void Delete(T entity);

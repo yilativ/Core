@@ -8,7 +8,7 @@ using Core.Infrastructure.Data;
 
 namespace Core.Service.Infrastructure
 {
-    public interface IServiceBase<T> : IUnitOfWork, IDisposable
+    public interface IServiceBase<T> : IUnitOfWork
     {
         T GetItem(int id);
 

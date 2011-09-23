@@ -79,11 +79,5 @@ namespace Core.Infrastructure.Data
         {
             context.SaveChanges();
         }
-
-        public void Dispose()
-        {
-            if (context != null)
-                context.Dispose();
-        }
     }
 }
