@@ -63,12 +63,8 @@
     <Compile Include="Security\CryptographyService.cs" />
     <Compile Include="Security\CryptoSettings.cs" />
     <Compile Include="Security\IAuthenticationService.cs" />
-    <Compile Include="Security\IAuthorizationService.cs" />
     <Compile Include="Security\ICryptographyService.cs" />
-    <Compile Include="Security\IMembershipService.cs" />
-    <Compile Include="Security\IRole.cs" />
     <Compile Include="Service\IServiceBase.cs" />
-    <Compile Include="Security\IUser.cs" />
     <Compile Include="Validation\IValidationResult.cs" />
     <Compile Include="Validation\IValidationServiceFactory.cs" />
     <Compile Include="Validation\IValidationFailure.cs" />
