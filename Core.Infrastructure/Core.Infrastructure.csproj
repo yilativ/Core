@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateRange.cs" />
     <Compile Include="NameOf.cs" />
     <Compile Include="Data\DbContextBase.cs" />
     <Compile Include="Data\IConnectionFactory.cs" />
