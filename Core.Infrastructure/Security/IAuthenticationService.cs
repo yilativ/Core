@@ -11,5 +11,6 @@ namespace Core.Infrastructure.Security
     {
         bool Login(string username, bool rememberMe, string friendlyName);
         bool Logout(string username);
+        bool UpdateLogin(string username, bool rememberMe, string friendlyName);
     }
 }
