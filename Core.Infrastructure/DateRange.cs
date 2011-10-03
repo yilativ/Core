@@ -12,6 +12,14 @@ namespace Core
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
+        public static DateTime MaxDate
+        {
+            get
+            {
+                return new DateTime(2050, 1, 1);
+            }
+        }
+
         public static DateRange Today
         {
             get
@@ -33,6 +41,14 @@ namespace Core
             get
             {
                 return FromInMonths(DateTime.Now, 1);
+            }
+        }
+
+        public static DateRange FromToday
+        {
+            get
+            {
+                return new DateRange { StartDate = DateTime.Now.Date, EndDate = MaxDate };
             }
         }
 

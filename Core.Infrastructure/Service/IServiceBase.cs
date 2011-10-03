@@ -12,7 +12,7 @@ namespace Core.Service.Infrastructure
     {
         T GetItem(int id);
 
-        IEnumerable<T> GetItems();
+        IQueryable<T> GetItems();
 
         void Create(T item);
         void Delete(int id);

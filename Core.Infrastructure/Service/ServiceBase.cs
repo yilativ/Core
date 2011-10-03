@@ -29,7 +29,7 @@ namespace Core.Service.Infrastructure
             return repository.GetById(id);
         }
 
-        public IEnumerable<T> GetItems()
+        public IQueryable<T> GetItems()
         {
             return repository.GetAll();
         }
