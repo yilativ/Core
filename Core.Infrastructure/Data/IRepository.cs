@@ -14,6 +14,7 @@ namespace Core.Infrastructure.Data
         void Delete(T entity);
         void Delete(Expression<Func<T, bool>> where);
         T GetById(int id);
+        T GetByKey(params object[] keyValues);
         T Get(Expression<Func<T, bool>> where);
         IQueryable<T> GetAll();
         IQueryable<T> GetWhere(Expression<Func<T, bool>> where);

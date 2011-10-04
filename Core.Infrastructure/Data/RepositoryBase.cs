@@ -29,7 +29,6 @@ namespace Core.Infrastructure.Data
             if (entity == null)
                 throw new ArgumentNullException("entity");
 
-            Log.Info("Adding entity: " + entity.ToString());
             entities.Add(entity);
         }
 
@@ -38,7 +37,6 @@ namespace Core.Infrastructure.Data
             if (entity == null)
                 throw new ArgumentNullException("entity");
 
-            Log.Info("Deleting entity: " + entity.ToString());
             entities.Remove(entity);
         }
 
@@ -52,8 +50,12 @@ namespace Core.Infrastructure.Data
 
         public T GetById(int id)
         {
-            Log.Info("Getting entity from {0} with id: {1}", this, id);
             return entities.Find(id);
+        }
+
+        public T GetByKey(params object[] keyValues)
+        {
+            return entities.Find(keyValues);
         }
 
         public T Get(System.Linq.Expressions.Expression<Func<T, bool>> where)
@@ -63,13 +65,11 @@ namespace Core.Infrastructure.Data
 
         public IQueryable<T> GetAll()
         {
-            Log.Info("Getting all entities from {0}", this);
             return entities;
         }
 
         public IQueryable<T> GetWhere(System.Linq.Expressions.Expression<Func<T, bool>> where)
         {
-            Log.Info("Getting entities with a 'where' expression from: {0}", this);
             return entities.Where(where);
         }
 
