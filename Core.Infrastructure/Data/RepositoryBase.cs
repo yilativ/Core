@@ -73,8 +73,6 @@ namespace Core.Infrastructure.Data
             return entities.Where(where);
         }
 
-        public abstract override string ToString();
-
         public void SaveChanges()
         {
             context.SaveChanges();

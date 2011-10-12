@@ -48,8 +48,6 @@ namespace Core.Service.Infrastructure
             repository.Delete(item);
         }
 
-        public abstract override string ToString();
-
         public void SaveChanges()
         {
             repository.SaveChanges();
