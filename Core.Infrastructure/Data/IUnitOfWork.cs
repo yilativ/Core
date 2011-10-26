@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text; 
+using System.Text;
 #endregion Using Directives
 
 namespace Core.Infrastructure.Data
 {
     public interface IUnitOfWork
     {
-        void SaveChanges();
+        int SaveChanges();
     }
 }

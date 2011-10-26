@@ -48,9 +48,9 @@ namespace Core.Service.Infrastructure
             repository.Delete(item);
         }
 
-        public void SaveChanges()
+        public int SaveChanges()
         {
-            repository.SaveChanges();
+            return repository.SaveChanges();
         }
     }
 }

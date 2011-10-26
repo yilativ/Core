@@ -73,9 +73,9 @@ namespace Core.Infrastructure.Data
             return entities.Where(where);
         }
 
-        public void SaveChanges()
+        public int SaveChanges()
         {
-            context.SaveChanges();
+            return context.SaveChanges();
         }
     }
 }

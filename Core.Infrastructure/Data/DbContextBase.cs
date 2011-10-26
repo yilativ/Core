@@ -25,10 +25,5 @@ namespace Core.Infrastructure.Data
         {
             return base.Set<TEntity>();
         }
-
-        public void SaveChanges()
-        {
-            base.SaveChanges();
-        }
     }
 }
